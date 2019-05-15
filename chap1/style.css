@@ -118,3 +118,16 @@ body {
   font-size: 14px;
 }
 
+body {
+  display: grid;
+  grid-template-areas:
+          "head head head"
+          "side1 main side2"
+          "foot foot foot"
+}
+
+.site {grid-area: head}
+.menu {grid-area: side1}
+.kiji {grid-area: main}
+.kanren {grid-area: side2}
+.copyright {grid-area: foot}
