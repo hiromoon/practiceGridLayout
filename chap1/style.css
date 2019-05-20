@@ -142,6 +142,10 @@ body {
           "foot foot";
     grid-template-columns: 1fr 3fr;
   }
+
+  .kanren {background-color: #cdcdbb}
+  .kanren ul {display: flex}
+  .kanren li {flex: 1}
 }
 
 @media (max-width: 599px) {
@@ -154,5 +158,29 @@ body {
           "foot";
     grid-template-columns: 1fr;
   }
+  .menu {
+    padding: 0;
+    border-top: solid 1px #ffffff;
+  }
+  .menu ul {display: flex}
+  .menu li {flex: 1}
+  .menu li:not(:first-child) {
+    border-left: solid 1px #ffffff;
+  }
+  .menu li a {
+    margin-bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .kiji {padding: 40px 20px}
+
+  .kanren {background-color: #cdcdbb}
+  .kanren ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .kanren li {flex: 1 0 50%}
 }
 
