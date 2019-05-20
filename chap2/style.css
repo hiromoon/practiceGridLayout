@@ -157,3 +157,11 @@ body {
   color: #666666;
   font-size: 14px;
 }
+
+body {
+  display: grid;
+  grid-template-columns:
+    1fr 700px 50px 300px 1fr;
+  grid-template-rows:
+    auto auto 40px auto 30px auto;
+}
