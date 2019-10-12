@@ -8,7 +8,7 @@ body {
 body {
   display: grid;
   grid-template-columns: [left] minmax(20px, 1fr) [main] minmax(auto, 1140px) [main-end] minmax(20px, 1fr) [right];
-  grid-template-rows: [head] auto [head] auto [img] auto [catch] auto [main] auto [foot] auto [bottom];
+  grid-template-rows: [head] auto [head] auto [img] auto [catch] auto [main] auto [sns] auto [foot] auto [bottom];
 }
 
 .site {
@@ -48,6 +48,16 @@ button {
 .news {
   grid-column-start: main;
   grid-row-start: main;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.sns {
+  grid-column-start: main;
+  grid-row-start: main;
+  width: 28%;
+  box-sizing: border-box;
+  justify-self: end;
 }
 
 .copyright {
@@ -147,10 +157,66 @@ button:focus {
   background-color: #eeeeee;
 }
 
+.sns ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sns li {
+  flex: 1;
+}
+
+.sns li a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sns li a:hover {
+  opacity: 0.8;
+}
+
+.fa-twitter {
+  background-color: #55acee;
+}
+
+.fa-facebook {
+  background-color: #3b5998;
+}
+
+.fa-google-plus {
+  background-color: #dd4b39;
+}
+
 .copyright p {
   margin: 0;
   color: #666666;
   font-size: 14px;
+}
+
+@media (min-width: 1280px) {
+  .news {
+    width: 100%;
+  }
+  .sns {
+    grid-column-start: left;
+    grid-row-start: img;
+    width: auto;
+    align-self: center;
+  }
+
+  .sns li a {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 @media (max-width: 1179px) {
@@ -174,6 +240,16 @@ button:focus {
 
   .menu ul {
     flex-direction: column;
+  }
+
+  .news {
+    width: auto;
+  }
+
+  .sns {
+    grid-row-start: sns;
+    width: auto;
+    justify-self: stretch;
   }
 }
 
