@@ -72,6 +72,15 @@ button {
 .copyright {
   grid-column-start: main;
   grid-row-start: foot;
+  margin: 15px 0;
+}
+
+.fbar {
+  grid-column-start: left;
+  grid-column-end: right;
+  grid-row-start:foot;
+  background-color: #dddddd;
+  z-index: -1;
 }
 
 .site {
@@ -256,6 +265,18 @@ button:focus {
 }
 
 @media (min-width: 1280px) {
+  .hbar {
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: head;
+    z-index: -1;
+    border-bottom: solid 4px #dddddd;
+  }
+
+  .headimg {
+    margin-top: 20px;
+  }
+
   .news {
     width: 100%;
   }
