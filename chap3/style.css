@@ -1,8 +1,8 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-family: 'Source Sans Pro', 'メイリオ', 'Hiragion Kaku Gothic Pro', sans-serif;
 }
 
 body {
@@ -89,4 +89,11 @@ body {
   margin: 0;
   color: #666666;
   font-size: 14px;
+}
+
+@media (max-width: 1179px) {
+  .headimg {
+    grid-column-start: left;
+    grid-column-end: right;
+  }
 }
