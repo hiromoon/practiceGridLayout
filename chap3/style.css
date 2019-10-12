@@ -1,8 +1,14 @@
 @charset "UTF-8"
 
 body {
-  margin:0;
-  font-family: 'Source Sans Pro', 'メイリオ', 'Hiragino Kaku Gothic Pro', 'sans-serif'
+  margin: 0;
+  font-family: 'Source Sans Pro', 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1140px 1fr;
+  grid-template-rows: auto auto auto auto;
 }
 
 .site a {
