@@ -8,7 +8,7 @@ body {
 body {
   display: grid;
   grid-template-columns: [left] minmax(20px, 1fr) [main] minmax(auto, 1140px) [main-end] minmax(20px, 1fr) [right];
-  grid-template-rows: [head] auto [img] auto [main] auto [foot] auto [bottom];
+  grid-template-rows: [head] auto [img] auto [catch] auto [main] auto [foot] auto [bottom];
 }
 
 .site {
@@ -19,6 +19,15 @@ body {
 .headimg {
   grid-column-start: main;
   grid-row-start: img;
+}
+
+.catch {
+  grid-column-start: main;
+  grid-row-start: img;
+  justify-self: start;
+  align-self: end;
+  margin-left: 20px;
+  margin-bottom: 40px;
 }
 
 .news {
@@ -51,6 +60,12 @@ body {
   height: auto;
   margin-bottom: 20px;
   vertical-align: bottom;
+}
+
+.catch {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.7);
+  font-size: 24px;
 }
 
 .news {
@@ -95,5 +110,15 @@ body {
   .headimg {
     grid-column-start: left;
     grid-column-end: right;
+  }
+}
+
+@media (max-width: 599px) {
+  .catch {
+    grid-row-start: catch;
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 5vw;
   }
 }
